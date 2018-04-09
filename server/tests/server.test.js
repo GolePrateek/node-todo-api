@@ -60,8 +60,8 @@ describe('POST /todos',()=>{
   });
 });
 
-describe('GET /todos',(done)=>{
-  it('should get all todos',()=>{
+describe('GET /todos',()=>{
+  it('should get all todos',(done)=>{
     request(app)
       .get('/todos')
       .expect(200)
@@ -69,5 +69,5 @@ describe('GET /todos',(done)=>{
         expect(res.body.todos.length).toBe(2);
       })
       .end(done);
-  })
+  });
 })
